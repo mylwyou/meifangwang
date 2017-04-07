@@ -1,0 +1,42 @@
+<extend name="./Application/Sysmanage/View/Nstate/index.html" />
+
+<block name="beginjs">
+    <load href="/Public/sysmanage/css/colorpicker.css" />
+    <load href="/Public/sysmanage/css/datepicker.css" />
+    <load href="/Public/sysmanage/css/uniform.css" />
+    <load href="/Public/sysmanage/css/select2.css" />
+    <load href="/Public/sysmanage/css/unicorn.grey.css" />
+    <load href="/Public/sysmanage/js/jquery.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.ui.custom.js"/>
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-colorpicker.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-datepicker.js"/>
+    <load href="/Public/sysmanage/js/jquery.uniform.js"/>
+    <load href="/Public/sysmanage/js/select2.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.form_common.js"/>
+    <load href="/Public/sysmanage/js/lhgcore.min.js"/>
+    <script>
+    $(function(){
+    	var a='{$ifsuccess}';//如果是首次进来，则不操作，如果是图片已经上传到服务器上，则将图片地址回传到父窗口中
+    	if(a=='ok')
+    	{
+    		var DG = frameElement.lhgDG;
+    		J('#{$flag}_img',DG.curDoc).attr("src",'{$picurl}');//子窗口中给父窗口里img的src赋值
+    		J('#{$flag}',DG.curDoc).val('{$picurl}'); //子窗口中给父窗口里的hidden赋值
+    		DG.cancel();//关闭子窗口
+    	}
+    });
+    </script>
+</block>
+
+<block name="containerinfo">
+	<form action="__URL__/upload/flag/{$flag}/width/{$width}/height/{$height}/upflag/{$upflag}" method="post" class="form-horizontal" name="yuziform" id="yuziform" enctype="multipart/form-data">
+	 	<div >
+			<input type="file" name="pic"  />&nbsp;&nbsp;<button type="submit" class="btn btn-primary">上传</button>
+			<span class="help-block">&nbsp;{$dis}</span>
+		</div>
+    </form>
+</block>
+
+

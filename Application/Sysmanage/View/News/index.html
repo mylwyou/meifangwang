@@ -1,0 +1,152 @@
+<extend name="./Application/Sysmanage/View/Master/index.html" />
+
+<block name="beginjs">
+	<load href="/Public/sysmanage/css/bootstrap.min.css" />
+    <load href="/Public/sysmanage/css/bootstrap-responsive.min.css" />
+    <load href="/Public/sysmanage/css/colorpicker.css" />
+    <load href="/Public/sysmanage/css/datepicker.css" />
+    <load href="/Public/sysmanage/css/uniform.css" />
+    <load href="/Public/sysmanage/css/select2.css" />
+    <load href="/Public/sysmanage/css/unicorn.main.css" />
+    <load href="/Public/sysmanage/css/unicorn.grey.css" class="skin-color" />
+
+</block>
+
+<block name="left"><include file="./Application/Sysmanage/View/Leftbar/index.html" flag='news' /></block>
+
+<block name="containerheader">
+<div id="breadcrumb">
+        <a href="{:U('Home/index')}" title="返回首页" class="tip-bottom"><i class="icon-home">
+        </i> 首页</a><a href="{:U('News/index')}" class="current">资讯列表</a>
+    </div>
+</block>
+
+<block name="containerinfo">
+<div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"><i class="icon-th"></i></span>
+                        <h5><a href="__URL__/add">添加资讯</a></h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                    <table cellpadding="5">
+                            <form action="__URL__/index" method="post" name="yuziform" id="yuziform">
+                            <tr>
+                                <td>
+                                    &nbsp;标题：<input type="text" id="keyword" name="keyword" value="{$keyword}" style="max-width: 300px" maxlength="30" />&nbsp;&nbsp;
+                                    <select id="catid" name="catid" style="max-width: 150px">
+                                    <option value="0">所有分区</option>
+                                    <option value="1" <eq name="catid" value='1'> selected="selected" </eq> >环京专区</option>
+                                    <option value="2" <eq name="catid" value='2'> selected="selected" </eq> >海南专区</option>
+                                    <option value="3" <eq name="catid" value='3'> selected="selected" </eq> >华东专区</option>
+                                    <option value="4" <eq name="catid" value='4'> selected="selected" </eq> >深广专区</option>
+                                </select>&nbsp;&nbsp;
+                                <select id="tag" name="tag" style="max-width: 150px">
+                                    <option value="0">所有标签</option>
+                                    <option value="1" <eq name="tag" value='1'> selected="selected" </eq> >置顶</option>
+                                    <option value="2" <eq name="tag" value='2'> selected="selected" </eq> >推荐</option>
+                                    <option value="3" <eq name="tag" value='3'> selected="selected" </eq> >热门</option>
+                                </select>
+                                </td>
+								<td valign="top">
+									<button type="submit" class="btn btn-primary"> 搜索</button>
+								</td>
+                            </tr>
+                            </form>
+                        </table>
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                <th>
+                                        列表图
+                                    </th>
+                                    <th>
+                                        标题
+                                    </th>
+                                    <th>
+                                        分区
+                                    </th>
+                                    <th>
+                                        标签
+                                    </th>
+                                    <th>
+                                        浏览次数
+                                    </th>
+                                    <th>
+                                        列表样式
+                                    </th>
+                                    <th>
+                                        详情样式
+                                    </th>
+                                    <th>
+                                        添加时间
+                                    </th>
+                                    <th style="width: 30px">
+                                        操作
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+								<volist name="list" id="cp">
+                                <tr>
+                                    <td>
+                                    	<img src="{$cp.pic}" style="width:150px;" alt="引导图" />
+                                    </td>
+                                    <td>
+                                        {$cp.title}
+                                    </td>
+                                    <td>
+										 {$cp.catid_str}
+                                    </td>
+                                    <td>
+										{$cp.tag_str}
+                                    </td>
+                                     <td>
+										{$cp.viewnum}
+                                    </td>
+                                     <td>
+										{$cp.liststyle}
+                                    </td>
+                                    <td>
+										{$cp.showstyle}
+                                    </td>
+                                     <td>
+										{$cp.createtime_str}
+                                    </td>
+                                    <td>
+                                        <a href="__URL__/add/action/upd/id/{$cp.id}/p/{$p}/keyword_cs/{$keyword}/catid_cs/{$catid}/tag_cs/{$tag}">修改</a><br/><br/>
+                                        <a
+                                            href="__URL__/del/id/{$cp.id}/p/{$p}/keyword_cs/'{$keyword}'/catid_cs/{$catid}/tag_cs/{$tag}" onclick="return confirm('确定要删除该资讯吗？');">删除</a>
+                                    </td>
+                                </tr>
+                                </volist>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination alternate" style="text-align: center; vertical-align: middle">
+                    {$page}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="endjs">
+	<load href="/Public/sysmanage/js/jquery.min.js" />
+	<load href="/Public/sysmanage/js/jquery.ui.custom.js" />
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.uniform.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-colorpicker.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-datepicker.js"/>
+    <load href="/Public/sysmanage/js/select2.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.form_common.js"/>
+    <load href="/Public/sysmanage/js/lhgcore.min.js"/>
+    <script src="/Public/sysmanage/js/lhgdialog.min.js?s=facebook" type="text/javascript"></script>
+    <load href="/Public/sysmanage/js/mydialog.min.js"/>
+</block>
+
+

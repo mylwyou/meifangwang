@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>美房网后台管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <block name="beginjs"></block>
+</head>
+<body>
+<div id="header">
+	<h1><a href="#">后台管理系统</a></h1>
+</div>
+
+<div id="user-nav" class="navbar navbar-inverse">
+    <ul class="nav btn-group">
+        <!-- <li class="btn btn-inverse" ><a title="" href="#"><i class="icon icon-user"></i> <span class="text">Profile</span></a></li> -->
+        <li class="btn btn-inverse"><a title="" href="{:U('Admin/updpass')}"><i class="icon icon-cog"></i> <span class="text">更改密码</span></a></li>
+        <li class="btn btn-inverse"><a title="" href="{:U('Admin/logout')}" onclick="return confirm('确定要退出后台吗？');"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+    </ul>
+</div>
+<block name="left"></block>
+
+<div id="content">
+    <block name="containerheader"></block>
+    <block name="containerinfo"></block>
+</div>
+<div class="row-fluid">
+	<div id="footer" class="span12">
+		2017 ,Powered By unionz
+	</div>
+</div>
+<block name="endjs"></block>
+</body>
+</html>

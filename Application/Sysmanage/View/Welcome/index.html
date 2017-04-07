@@ -1,0 +1,131 @@
+<extend name="./Application/Sysmanage/View/Master/index.html" />
+
+<block name="beginjs">
+	<load href="/Public/sysmanage/css/bootstrap.min.css" />
+    <load href="/Public/sysmanage/css/bootstrap-responsive.min.css" />
+    <load href="/Public/sysmanage/css/colorpicker.css" />
+    <load href="/Public/sysmanage/css/datepicker.css" />
+    <load href="/Public/sysmanage/css/uniform.css" />
+    <load href="/Public/sysmanage/css/select2.css" />
+    <load href="/Public/sysmanage/css/unicorn.main.css" />
+    <load href="/Public/sysmanage/css/unicorn.grey.css" class="skin-color" />
+    <load href="/Public/sysmanage/js/jquery.min.js" />
+
+    <script type="text/javascript">
+        function CheckForm() {
+
+        }
+
+      //flag为图片的字段名，dis为上传页面的提示
+        function uploadpic(flag,width,height,dis) {
+            winopenforapply("uploadpic", "上传图片", "__APP__/Sysmanage/Uploadpic/?width="+width+"&height="+height+"&dis="+dis+"&flag=" + flag+"&upflag=2", 400, 145);
+        }
+
+    </script>
+</block>
+
+<block name="left"><include file="./Application/Sysmanage/View/Leftbar/index.html" flag='welcome' /></block>
+
+<block name="containerheader">
+<div id="breadcrumb">
+        <a href="{:U('Home/index')}" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a><a href="{:U('Welcome/index')}" class="current">欢迎页图片</a>
+    </div>
+
+</block>
+
+<block name="containerinfo">
+<div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"><i class="icon-align-justify"></i></span>
+                        <h5>
+                            <a href="{:U('Welcome/index')}">欢迎页图片</a></h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="__URL__/addsend" method="post" class="form-horizontal"
+                        name="yuziform" id="yuziform">
+
+                        <div class="control-group">
+                            <label class="control-label">
+                                android欢迎页图：</label>
+                            <div class="controls">
+                            	<img id='android_pic_img' src=<eq name="fb_trip_pic_info.android_pic" value="">"/Public/sysmanage/img/empty.png"<else/>"{$fb_trip_pic_info.android_pic}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('android_pic',600,254,'图片建议尺寸为600*254，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为600*254，文件小于3M</span>
+                            	<input type="hidden" id="android_pic" name="android_pic" value="{$fb_trip_pic_info.android_pic}"/>
+                            </div>
+                        </div>
+
+                        <!-- <div class="control-group">
+                            <label class="control-label">
+                                ios欢迎页图(320*480)：</label>
+                            <div class="controls">
+                            	<img id='ios_480_img' src=<eq name="fb_trip_pic_info.ios_480" value="">"/Public/sysmanage/img/empty.png"<else/>"{$fb_trip_pic_info.ios_480}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('ios_480',600,254,'图片建议尺寸为320*480，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为320*480，文件小于3M</span>
+                            	<input type="hidden" id="ios_480" name="ios_480" value="{$fb_trip_pic_info.ios_480}"/>
+                            </div>
+                        </div> -->
+                        <div class="control-group">
+                            <label class="control-label">
+                                ios欢迎页图(640*960)：</label>
+                            <div class="controls">
+                            	<img id='ios_960_img' src=<eq name="fb_trip_pic_info.ios_960" value="">"/Public/sysmanage/img/empty.png"<else/>"{$fb_trip_pic_info.ios_960}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('ios_960',600,254,'图片建议尺寸为640*960，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为640*960，文件小于3M</span>
+                            	<input type="hidden" id="ios_960" name="ios_960" value="{$fb_trip_pic_info.ios_960}"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                ios欢迎页图(640*1136)：</label>
+                            <div class="controls">
+                            	<img id='ios_1136_img' src=<eq name="fb_trip_pic_info.ios_1136" value="">"/Public/sysmanage/img/empty.png"<else/>"{$fb_trip_pic_info.ios_1136}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('ios_1136',600,254,'图片建议尺寸为640*1136，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为640*1136，文件小于3M</span>
+                            	<input type="hidden" id="ios_1136" name="ios_1136" value="{$fb_trip_pic_info.ios_1136}"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                ios欢迎页图(750*1334)：</label>
+                            <div class="controls">
+                            	<img id='ios_1334_img' src=<eq name="fb_trip_pic_info.ios_1334" value="">"/Public/sysmanage/img/empty.png"<else/>"{$fb_trip_pic_info.ios_1334}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('ios_1334',600,254,'图片建议尺寸为750*1334，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为750*1334，文件小于3M</span>
+                            	<input type="hidden" id="ios_1334" name="ios_1334" value="{$fb_trip_pic_info.ios_1334}"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                ios欢迎页图(1242*2208)：</label>
+                            <div class="controls">
+                            	<img id='ios_2208_img' src=<eq name="fb_trip_pic_info.ios_2208" value="">"/Public/sysmanage/img/empty.png"<else/>"{$fb_trip_pic_info.ios_2208}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('ios_2208',600,254,'图片建议尺寸为1242*2208，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为1242*2208，文件小于3M</span>
+                            	<input type="hidden" id="ios_2208" name="ios_2208" value="{$fb_trip_pic_info.ios_2208}"/>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" onclick="return CheckForm(this);">
+                                保存</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="endjs">
+	<load href="/Public/sysmanage/js/jquery.ui.custom.js" />
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.uniform.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-colorpicker.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-datepicker.js"/>
+    <load href="/Public/sysmanage/js/select2.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.form_common.js"/>
+    <load href="/Public/sysmanage/js/lhgcore.min.js"/>
+    <script src="/Public/sysmanage/js/lhgdialog.min.js?s=facebook" type="text/javascript"></script>
+    <load href="/Public/sysmanage/js/mydialog.min.js"/>
+</block>
+
+

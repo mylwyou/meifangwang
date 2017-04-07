@@ -1,0 +1,235 @@
+[ 2017-04-06T20:09:16+08:00 ] ::1 /Api/Welcome/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: æ— æ³•åŠ è½½æŽ§åˆ¶å™¨:Welcome
+
+[ 2017-04-06T20:10:13+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: æ— æ³•åŠ è½½æŽ§åˆ¶å™¨:Welcome
+
+[ 2017-04-06T20:10:37+08:00 ] ::1 /index.php/Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: æ— æ³•åŠ è½½æŽ§åˆ¶å™¨:Welcome
+
+[ 2017-04-06T20:10:41+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: æ— æ³•åŠ è½½æŽ§åˆ¶å™¨:Welcome
+
+[ 2017-04-06T20:11:08+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php on line 15 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1714 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1715 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1725 è¡Œ.
+SQL: SELECT * FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Array to string conversion D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php ç¬¬ 16 è¡Œ.
+
+[ 2017-04-06T20:13:21+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php on line 15 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1714 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1715 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1725 è¡Œ.
+SQL: SELECT * FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-06T20:13:37+08:00 ] ::1 /Api/Welcome/info/resulttype=jsonp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php on line 15 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1714 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1715 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1725 è¡Œ.
+SQL: SELECT * FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2017-04-06T20:13:45+08:00 ] ::1 /Api/Welcome/info/resulttype/jsonp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php on line 15 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1714 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1715 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1725 è¡Œ.
+SQL: SELECT * FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-04-06T20:15:20+08:00 ] ::1 /Api/Welcome/info/resulttype/jsonp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0100s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php on line 15 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1714 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1715 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1725 è¡Œ.
+SQL: SELECT * FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0090s ]
+
+[ 2017-04-06T20:15:24+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\WelcomeController.class.php on line 15 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1714 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1715 è¡Œ.
+NOTIC: [8] Undefined variable: field D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1725 è¡Œ.
+SQL: SELECT * FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-06T20:16:38+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0090s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-06T20:31:53+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0050s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-06T20:34:25+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0050s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-04-06T20:34:27+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0040s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-06T20:38:27+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0050s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-06T20:39:12+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0030s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-06T20:39:48+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0040s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-06T20:40:16+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0020s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-04-06T20:40:21+08:00 ] ::1 /Api/Welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0060s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-06T20:57:06+08:00 ] ::1 /Api/welcome/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0050s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2017-04-06T20:58:17+08:00 ] ::1 /Api/welcome/info/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0040s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0050s ]
+
+[ 2017-04-06T21:00:13+08:00 ] ::1 /Api/welcome/info/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0030s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+

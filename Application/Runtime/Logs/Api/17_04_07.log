@@ -1,0 +1,144 @@
+[ 2017-04-07T10:07:06+08:00 ] ::1 /Api/pic/welcome/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.1130s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-07T10:07:12+08:00 ] ::1 /Api/pic/welcome/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_welcomepage` [ RunTime:0.0050s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_welcomepage` LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-04-07T10:13:26+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0120s ]
+
+[ 2017-04-07T10:14:13+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Think\Model::fetchSql(), called in D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php on line 56 and defined D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1843 è¡Œ.
+NOTIC: [8] Undefined variable: fetch D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\ThinkPHP\Library\Think\Model.class.php ç¬¬ 1844 è¡Œ.
+SQL: SELECT `title`,`pic`,`picurl` FROM `club_banner` ORDER BY orderby desc  [ RunTime:0.0010s ]
+NOTIC: [8] Array to string conversion D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 57 è¡Œ.
+
+[ 2017-04-07T10:14:26+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0090s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 63 è¡Œ.
+
+[ 2017-04-07T10:15:02+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0060s ]
+
+[ 2017-04-07T10:16:10+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0070s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 63 è¡Œ.
+
+[ 2017-04-07T10:20:47+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0060s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 61 è¡Œ.
+NOTIC: [8] Undefined variable: row D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 72 è¡Œ.
+
+[ 2017-04-07T10:21:46+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0060s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 61 è¡Œ.
+NOTIC: [8] Undefined variable: row D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 72 è¡Œ.
+
+[ 2017-04-07T10:25:06+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0060s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 62 è¡Œ.
+
+[ 2017-04-07T10:25:43+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0070s ]
+SQL: SELECT `title`,`pic`,`picurl` FROM `club_banner` ORDER BY orderby desc  [ RunTime:0.0000s ]
+
+[ 2017-04-07T10:33:56+08:00 ] ::1 /Api/pic/guide/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_guide` [ RunTime:0.0060s ]
+SQL: SELECT `android_pic`,`ios_960`,`ios_1136`,`ios_1334`,`ios_2208` FROM `club_guide` ORDER BY orderby desc  [ RunTime:0.0000s ]
+
+[ 2017-04-07T10:38:29+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0070s ]
+SQL: SELECT `title`,`pic`,`picurl` FROM `club_banner` ORDER BY orderby desc  [ RunTime:0.0010s ]
+
+[ 2017-04-07T10:38:45+08:00 ] ::1 /Api/pic/carousel/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `club_banner` [ RunTime:0.0070s ]
+SQL: SELECT `title`,`pic`,`picurl` FROM `club_banner` ORDER BY orderby desc  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\ÏîÄ¿\20ÃÀ·¿Íø\meifangweb\meifang\Application\Api\Controller\PicController.class.php ç¬¬ 62 è¡Œ.
+

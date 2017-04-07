@@ -1,0 +1,106 @@
+<extend name="./Application/Sysmanage/View/Master/index.html" />
+
+<block name="beginjs">
+	<load href="/Public/sysmanage/css/bootstrap.min.css" />
+    <load href="/Public/sysmanage/css/bootstrap-responsive.min.css" />
+    <load href="/Public/sysmanage/css/unicorn.main.css" />
+    <load href="/Public/sysmanage/css/unicorn.grey.css" class="skin-color" />
+    <script type="text/javascript">
+        function CheckForm() {
+            var pwd3 = $("#pwd3").val();
+            var pwd = $("#pwd").val();
+            var pwd2 = $("#pwd2").val();
+            if ($.trim(pwd3) == "") {
+                alert("请填写原始密码！");
+                $("#pwd3").val("");
+                $("#pwd3").focus();
+                return false;
+            }
+            else if ($.trim(pwd) == "") {
+                alert("请填写新密码！");
+                $("#pwd").val("");
+                $("#pwd").focus();
+                return false;
+            }
+            else if ($.trim(pwd2) == "") {
+                alert("请填写确认新密码！");
+                $("#pwd2").val("");
+                $("#pwd2").focus();
+                return false;
+            }
+            else if ($.trim(pwd2) != $.trim(pwd)) {
+                alert("确认新密码与新密码不一致！");
+                $("#pwd2").val("");
+                $("#pwd2").focus();
+                return false;
+            }
+        }
+    </script>
+</block>
+
+<block name="left"><include file="./Application/Sysmanage/View/Leftbar/index.html" flag='updpass' /></block>
+
+<block name="containerheader">
+<div id="breadcrumb">
+        <a href="{:U('Home/index')}" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a><a href="#" class="current">更改密码</a>
+    </div>
+
+</block>
+
+<block name="containerinfo">
+<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="widget-box">
+					<div class="widget-title">
+						<span class="icon">
+							<i class="icon-align-justify"></i>
+						</span>
+						<h5>更改密码</h5>
+					</div>
+					<div class="widget-content nopadding">
+						<form class="form-horizontal" method="post" action="__URL__/updpass/action/updpass" name="password_validate" id="password_validate" novalidate="novalidate">
+                            <div class="control-group">
+								<label class="control-label">原始密码</label>
+								<div class="controls">
+									<input type="password" name="pwd3" id="pwd3" />
+                                    <span class="help-block">必填，登陆帐号的旧密码</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">新密码</label>
+								<div class="controls">
+									<input type="password" name="pwd" id="pwd" />
+                                        <span class="help-block">必填，登陆帐号的新密码</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">确认新密码</label>
+								<div class="controls">
+									<input type="password" name="pwd2" id="pwd2" />
+                                    <span class="help-block">必填，跟新密码填写一致</span>
+								</div>
+							</div>
+							<div class="form-actions">
+								<button type="submit" class="btn btn-primary" onclick="return CheckForm(this);">
+                                提交</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</block>
+
+<block name="endjs">
+	<load href="/Public/sysmanage/js/jquery.min.js" />
+    <load href="/Public/sysmanage/js/jquery.uniform.js"/>
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.validate.js"/>
+    <load href="/Public/sysmanage/js/select2.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.form_common.js"/>
+</block>
+
+

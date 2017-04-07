@@ -1,0 +1,45 @@
+<extend name="./Application/Sysmanage/View/Master/index.html" />
+
+<block name="beginjs">
+	<load href="/Public/sysmanage/css/bootstrap.min.css" />
+	<load href="/Public/sysmanage/css/bootstrap-responsive.min.css" />
+	<load href="/Public/sysmanage/css/fullcalendar.css" />
+	<load href="/Public/sysmanage/css/unicorn.main.css" />
+	<load href="/Public/sysmanage/css/unicorn.grey.css" class="skin-color" />
+</block>
+
+<block name="left"><include file="./Application/Sysmanage/View/Leftbar/index.html" flag='main' /></block>
+
+<block name="containerheader">
+<div id="breadcrumb">
+        <a href="{:U('Home/index')}" title="返回首页" class="tip-bottom"><i class="icon-home">
+        </i> 首页</a>
+    </div>
+</block>
+
+<block name="containerinfo">
+<div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="alert alert-success">
+                    <strong>欢迎来到美房网管理后台!</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="endjs">
+	<load href="/Public/sysmanage/js/excanvas.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.ui.custom.js"/>
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.flot.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.flot.resize.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.peity.min.js"/>
+    <load href="/Public/sysmanage/js/fullcalendar.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.dashboard.js"/>
+</block>
+
+

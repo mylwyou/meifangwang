@@ -1,0 +1,57 @@
+
+<div id="sidebar">
+    <a class="visible-phone" href="#"><i class="icon icon-home"></i>美房网</a>
+    <ul>
+        <li <?php if ([flag] == "main"){ echo 'class="active"';} ?> ><a href="{:U('Home/index')}">
+            <i class="icon icon-list"></i><span>首页</span></a></li>
+        <li <?php if ([flag] == "welcome"){ echo 'class="active"';} ?> ><a href="{:U('Welcome/index')}">
+            <i class="icon icon-list"></i><span> 欢迎页图片</span></a></li>
+        <li <?php if ([flag] == "carousel"){ echo 'class="active"';} ?> ><a href="{:U('Carousel/index')}">
+            <i class="icon icon-list"></i><span> 轮播图列表</span></a></li>
+        <li <?php if ([flag] == "guide"){ echo 'class="active"';} ?> ><a href="{:U('Guide/index')}">
+            <i class="icon icon-list"></i><span> 引导图列表</span></a></li>
+        <li <?php if([flag]=="label"||[flag]=="news"){ echo 'class="submenu active open"';}else{echo 'class="submenu"';} ?>><a href="#"><i class="icon icon-th-list"></i><span>
+                资讯管理</span> <span class="label">2</span></a>
+            <ul>
+                <li <?php if ([flag] == "label"){echo 'class="active"';} ?>><a href="{:U('News/label')}">
+                    标签列表</a></li>
+                <li <?php if ([flag] == "news"){echo 'class="active"';} ?>><a href="{:U('News/index')}">
+                    资讯列表</a></li>
+            </ul>
+        </li>
+
+        <!-- <li <?php if([flag]=="user"||[flag]=="authuser"||[flag]=="authcar"){ echo 'class="submenu active open"';}else{echo 'class="submenu"';} ?>><a href="#"><i class="icon icon-th-list"></i><span>
+                用户管理</span> <span class="label">3</span></a>
+            <ul>
+                <li <?php if ([flag] == "user"){echo 'class="active"';} ?>><a href="{:U('User/index')}">
+                    用户列表</a></li>
+                <li <?php if ([flag] == "authuser"){echo 'class="active"';} ?>><a href="{:U('Authuser/index')}">
+                    租客认证列表</a></li>
+                <li <?php if ([flag] == "authcar"){echo 'class="active"';} ?>><a href="{:U('Authcar/index')}">
+                    车主认证列表</a></li>
+            </ul>
+        </li> -->
+
+        <!-- <li <?php if([flag]=="trip"||[flag]=="trippic"){ echo 'class="submenu active open"';}else{echo 'class="submenu"';} ?>><a href="#"><i class="icon icon-th-list"></i><span>
+                行程管理</span> <span class="label">2</span></a>
+            <ul>
+            	<li <?php if ([flag] == "trippic"){echo 'class="active"';} ?>><a href="{:U('Trippiclist/index')}">
+                    轮播图列表</a></li>
+                <li <?php if ([flag] == "trip"){echo 'class="active"';} ?>><a href="{:U('Trip/index')}">
+                    行程列表</a></li>
+            </ul>
+        </li>
+
+        <li <?php if ([flag] == "order"){echo 'class="active"';} ?>><a href="{:U('Order/index')}"><i class="icon icon-inbox">
+        </i><span>订单列表</span></a> </li>
+
+        <li <?php if ([flag] == "campsite"){echo 'class="active"';} ?>><a href="{:U('Campsite/index')}"><i class="icon icon-inbox">
+        </i><span>露营地管理</span></a> </li>
+
+        <li <?php if ([flag] == "feedback"){echo 'class="active"';} ?>><a href="{:U('Feedback/index')}"><i class="icon icon-inbox">
+        </i><span>意见反馈</span></a> </li> -->
+
+        <li <?php if ([flag] == "admin"){echo 'class="active"';} ?>><a href="{:U('Admin/index')}"><i class="icon icon-inbox">
+        </i><span>管理员列表</span></a> </li>
+    </ul>
+</div>

@@ -1,0 +1,90 @@
+<extend name="./Application/Sysmanage/View/Master/index.html" />
+
+<block name="beginjs">
+	<load href="/Public/sysmanage/css/bootstrap.min.css" />
+    <load href="/Public/sysmanage/css/bootstrap-responsive.min.css" />
+    <load href="/Public/sysmanage/css/colorpicker.css" />
+    <load href="/Public/sysmanage/css/datepicker.css" />
+    <load href="/Public/sysmanage/css/uniform.css" />
+    <load href="/Public/sysmanage/css/select2.css" />
+    <load href="/Public/sysmanage/css/unicorn.main.css" />
+    <load href="/Public/sysmanage/css/unicorn.grey.css" class="skin-color" />
+    <load href="/Public/sysmanage/js/jquery.min.js" />
+
+    <script type="text/javascript">
+        function CheckForm() {
+        	var lname=$("#lname").val();
+            if ($.trim(lname) == "") {
+            	alert("请填写标签名称！");
+                $("#lname").focus();
+                return false;
+            }
+        }
+    </script>
+</block>
+
+<block name="left"><include file="./Application/Sysmanage/View/Leftbar/index.html" flag='label' /></block>
+
+<block name="containerheader">
+<div id="breadcrumb">
+        <a href="{:U('Home/index')}" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a><a href="{:U('News/label')}" class="current">标签列表</a><a href="#" class="current"><if condition="$action eq 'upd'">修改标签<else/>添加标签</if></a>
+    </div>
+
+</block>
+
+<block name="containerinfo">
+<div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"><i class="icon-align-justify"></i></span>
+                        <h5>
+                            <a href="{:U('News/label')}">标签列表</a></h5>
+                    </div>
+                    <div class="widget-content nopadding">
+						<form action="__URL__/labeladdsend/action/{$action}/id/{$id}/p/{$p}" method="post" class="form-horizontal"
+                        name="yuziform" id="yuziform">
+                        <div class="control-group">
+                            <label class="control-label">
+                                标签名称：</label>
+                            <div class="controls">
+                            	<input type="text" id="lname" name="lname" value='{$label_info.lname}'/>
+                                <span class="help-block">必填</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                排序：</label>
+                            <div class="controls">
+                            	<input type="text" id="paixu" name="paixu" value='{$label_info.orderby}' maxlength="4" onkeyup="value=value.replace(/[^\d]/g,'')"/>
+                                <span class="help-block">必填，必须为数字</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" onclick="return CheckForm(this);">
+                                保存</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="endjs">
+	<load href="/Public/sysmanage/js/jquery.ui.custom.js" />
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.uniform.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-colorpicker.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-datepicker.js"/>
+    <load href="/Public/sysmanage/js/select2.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.form_common.js"/>
+    <load href="/Public/sysmanage/js/lhgcore.min.js"/>
+    <script src="/Public/sysmanage/js/lhgdialog.min.js?s=facebook" type="text/javascript"></script>
+    <load href="/Public/sysmanage/js/mydialog.min.js"/>
+</block>
+
+

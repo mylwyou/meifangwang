@@ -1,0 +1,207 @@
+<extend name="./Application/Sysmanage/View/Master/index.html" />
+
+<block name="beginjs">
+	<load href="/Public/sysmanage/css/bootstrap.min.css" />
+    <load href="/Public/sysmanage/css/bootstrap-responsive.min.css" />
+    <load href="/Public/sysmanage/css/colorpicker.css" />
+    <load href="/Public/sysmanage/css/datepicker.css" />
+    <load href="/Public/sysmanage/css/uniform.css" />
+    <load href="/Public/sysmanage/css/select2.css" />
+    <load href="/Public/sysmanage/css/unicorn.main.css" />
+    <load href="/Public/sysmanage/css/unicorn.grey.css" class="skin-color" />
+    <load href="/Public/sysmanage/js/jquery.min.js" />
+	<load href="/Public/kindeditor/themes/default/default.css" />
+	<load href="/Public/kindeditor/kindeditor-all-min.js" charset="utf-8"/>
+
+    <script type="text/javascript">
+	    function checkLen_content(term) {
+	        if (term.value.length > 150) {
+	            alert("您输入的内容过长！");
+	            this.disabled = 'true'
+	            term.value = term.value.substring(0, 150);
+	            $("#spscontent").html(0);
+	        }
+	        else {
+	            $("#spscontent").html(150 - term.value.length);
+	        }
+	    }
+        function CheckForm() {
+        	var title=$("#title").val();
+            if ($.trim(title) == "") {
+            	alert("请填写标题！");
+                $("#title").focus();
+                return false;
+            }
+        }
+
+        //flag为图片的字段名，dis为上传页面的提示
+        function uploadpic(flag,width,height,dis) {
+            winopenforapply("uploadpic", "上传图片", "__APP__/Sysmanage/Uploadpic/?width="+width+"&height="+height+"&dis="+dis+"&flag=" + flag+"&upflag=3", 400, 145);
+        }
+
+        KindEditor.ready(function(K) {
+            var editor1 = K.create('textarea[name="ncontent"]', {
+                cssPath : '__PUBLIC__/kindeditor/plugins/code/prettify.css',
+                uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+                fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+                allowFileManager : true,
+                afterCreate : function() {
+                    var self = this;
+                    K.ctrl(document, 13, function() {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                    K.ctrl(self.edit.doc, 13, function() {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                }
+            });
+            prettyPrint();
+        });
+    </script>
+</block>
+
+<block name="left"><include file="./Application/Sysmanage/View/Leftbar/index.html" flag='news' /></block>
+
+<block name="containerheader">
+<div id="breadcrumb">
+        <a href="{:U('Home/index')}" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a><a href="{:U('News/index')}" class="current">资讯列表</a><a href="#" class="current"><if condition="$action eq 'upd'">修改资讯<else/>添加资讯</if></a>
+    </div>
+
+</block>
+
+<block name="containerinfo">
+<div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"><i class="icon-align-justify"></i></span>
+                        <h5>
+                            <a href="{:U('News/index')}">资讯列表</a></h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="__URL__/addsend/action/{$action}/id/{$id}/p/{$p}" method="post" class="form-horizontal"
+                        name="yuziform" id="yuziform">
+
+                        <div class="control-group">
+                            <label class="control-label">
+                                标题：</label>
+                            <div class="controls">
+                            	<input type="text" id="title" name="title" value='{$information_info.title}' maxlength="50"/>
+                                <span class="help-block">必填，资讯的标题</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">
+                                简单介绍：</label>
+                            <div class="controls">
+                            	<textarea rows="5" id="scontent" name="scontent" onkeypress="checkLen_content(this)" onkeyup="checkLen_content(this)" onchange="checkLen_content(this)">{$information_info.scontent}</textarea>
+                            	<span class="help-block">简单介绍在150字以内，您还可以输入<span id="spscontent" style="color:Red">150</span>字）</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                详细内容：</label>
+                            <div class="controls">
+                            	<!-- <textarea name="content" style="width:700px;height:200px;visibility:hidden;">{$information_info.content}</textarea> -->
+                            	<textarea name="ncontent" cols="100" id="ncontent" rows="25" style="width: 710">{$information_info.content}</textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                列表图片：</label>
+                            <div class="controls">
+                            	<img id='pic_img' src=<eq name="information_info.pic" value="">"/Public/sysmanage/img/empty.png"<else/>"{$information_info.pic}"</eq>  style="width:150px;" alt="" />&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="uploadpic('pic',600,254,'图片建议尺寸为500*318，文件小于3M');">上传图片</button>
+                            	<span class="help-block">图片建议尺寸为500*318，文件小于3M</span>
+                            	<input type="hidden" id="pic" name="pic" value="{$information_info.pic}"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                分区：</label>
+                            <div class="controls">
+                            	<select id="catid" name="catid" style="max-width:150px">
+                            		<option value="0" <eq name="catid" value="0"> selected="selected" </eq>>请选择专区</option>
+                                    <option value="1" <eq name="catid" value="1"> selected="selected" </eq>>环京专区</option>
+                                    <option value="2" <eq name="catid" value="2"> selected="selected" </eq>>海南专区</option>
+                                    <option value="3" <eq name="catid" value="3"> selected="selected" </eq>>华东专区</option>
+                                    <option value="4" <eq name="catid" value="4"> selected="selected" </eq>>深广专区</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                标签：</label>
+                            <div class="controls">
+                            	<select id="tag" name="tag" style="max-width:150px">
+                            		<option value="0" <eq name="tag" value="0"> selected="selected" </eq>>请选择标签</option>
+                                    <option value="1" <eq name="tag" value="1"> selected="selected" </eq>>置顶</option>
+                                    <option value="2" <eq name="tag" value="2"> selected="selected" </eq>>推荐</option>
+                                    <option value="3" <eq name="tag" value="3"> selected="selected" </eq>>热门</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                列表页显示的样式：</label>
+                            <div class="controls">
+                            	<select id="liststyle" name="liststyle" style="max-width:150px">
+                                    <option value="1" <eq name="liststyle" value="1"> selected="selected" </eq>>样式一</option>
+                                    <option value="2" <eq name="liststyle" value="2"> selected="selected" </eq>>样式二</option>
+                                    <option value="3" <eq name="liststyle" value="3"> selected="selected" </eq>>样式三</option>
+                                    <option value="4" <eq name="liststyle" value="4"> selected="selected" </eq>>样式四</option>
+                                    <option value="5" <eq name="liststyle" value="5"> selected="selected" </eq>>样式五</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                详情页显示的样式：</label>
+                            <div class="controls">
+                            	<select id="showstyle" name="showstyle" style="max-width:150px">
+                            		<option value="1" <eq name="showstyle" value="1"> selected="selected" </eq>>样式一</option>
+                                    <option value="2" <eq name="showstyle" value="2"> selected="selected" </eq>>样式二</option>
+                                    <option value="3" <eq name="showstyle" value="3"> selected="selected" </eq>>样式三</option>
+                                    <option value="4" <eq name="showstyle" value="4"> selected="selected" </eq>>样式四</option>
+                                    <option value="5" <eq name="showstyle" value="5"> selected="selected" </eq>>样式五</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">
+                                浏览的次数：</label>
+                            <div class="controls">
+                            	<input type="text" id="viewnum" name="viewnum" value='{$information_info.viewnum}' maxlength="9" onkeyup="value=value.replace(/[^\d]/g,'')" />
+                                <span class="help-block">必须为数字</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" onclick="return CheckForm(this);">
+                                保存</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="endjs">
+	<load href="/Public/sysmanage/js/jquery.ui.custom.js" />
+    <load href="/Public/sysmanage/js/bootstrap.min.js"/>
+    <load href="/Public/sysmanage/js/jquery.uniform.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-colorpicker.js"/>
+    <load href="/Public/sysmanage/js/bootstrap-datepicker.js"/>
+    <load href="/Public/sysmanage/js/select2.min.js"/>
+    <load href="/Public/sysmanage/js/unicorn.js"/>
+    <load href="/Public/sysmanage/js/unicorn.form_common.js"/>
+    <load href="/Public/sysmanage/js/lhgcore.min.js"/>
+    <script src="/Public/sysmanage/js/lhgdialog.min.js?s=facebook" type="text/javascript"></script>
+    <load href="/Public/sysmanage/js/mydialog.min.js"/>
+</block>
+
+
